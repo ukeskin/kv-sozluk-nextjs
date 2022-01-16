@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import dbConnect from "../lib/dbConnect";
 import Word from "../models/Word";
 import Footer from "../components/Footer";
+import IndexPage from "../components/IndexPage";
 
 export default function Home({ words }) {
   const [filteredData, setFilteredData] = useState(words);
@@ -19,6 +20,7 @@ export default function Home({ words }) {
   };
   return (
     <div className="">
+      <IndexPage />
       <main className="font-sans container mx-auto min-h-full pb-48">
         <div className="w-full mt-16">
           <div
@@ -73,12 +75,10 @@ export default function Home({ words }) {
                     {data.word_en}
                   </h2>
                 </div>
-                {data.word_explanation_tr && (
-                  <div className="space-y-4 rounded bg-yellow- p-2 text-indigo-900 divide-y divide-yellow-200">
-                    <p className="text-lg">{data.explaination_tr}</p>
-                    <p className="text-lg pt-2">{data.explaination_en}</p>
-                  </div>
-                )}
+                <div className="space-y-4 rounded bg-yellow- p-2 text-indigo-900 divide-y divide-yellow-200">
+                  <p className="text-lg">{data.explaination_tr}</p>
+                  <p className="text-lg pt-2">{data.explaination_en}</p>
+                </div>
               </div>
             );
           })}
