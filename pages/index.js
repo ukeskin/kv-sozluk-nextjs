@@ -19,7 +19,7 @@ export default function Home({ words }) {
   };
   return (
     <>
-      <div className="font-sans container mx-auto">
+      <main className="font-sans container mx-auto min-h-full pb-48">
         <div className="w-full mt-16">
           <div
             className="flex-col p-4 text-center w-full h-48"
@@ -59,7 +59,7 @@ export default function Home({ words }) {
                 className="rounded-lg shadow text-indigo-800 space-y-5 p-4 mt-8 border-l-4 border-yellow-500 hover:border-yellow-300 transition delay-75"
                 key={index}
               >
-                <div className="space-y-2">
+                <div className="space-y-4">
                   <h2 className="font-medium text-xl">
                     <span className="rounded text-white bg-red-500 p-1 text-xs text-center mr-2">
                       TR
@@ -73,15 +73,17 @@ export default function Home({ words }) {
                     {data.word_en}
                   </h2>
                 </div>
-                <div className="space-y-4 rounded bg-yellow- p-2 text-indigo-900 divide-y divide-yellow-200">
-                  <p className="text-lg">{data.explaination_tr}</p>
-                  <p className="text-lg pt-2">{data.explaination_en}</p>
-                </div>
+                {data.word_explanation_tr && (
+                  <div className="space-y-4 rounded bg-yellow- p-2 text-indigo-900 divide-y divide-yellow-200">
+                    <p className="text-lg">{data.explaination_tr}</p>
+                    <p className="text-lg pt-2">{data.explaination_en}</p>
+                  </div>
+                )}
               </div>
             );
           })}
         </div>
-      </div>
+      </main>
       <Footer />
     </>
   );
