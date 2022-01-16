@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   switch (method) {
     case "GET":
       try {
-        const words = await Word.find({}).sort({ word_tr: 1 });
+        const words = await Word.find({}).sort({ word_en: 1 });
         res.status(200).json({ success: true, data: words });
       } catch (error) {
         res.status(400).json({ success: false });

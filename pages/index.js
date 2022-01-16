@@ -18,7 +18,7 @@ export default function Home({ words }) {
     setFilteredData(result);
   };
   return (
-    <>
+    <div className="">
       <main className="font-sans container mx-auto min-h-full pb-48">
         <div className="w-full mt-16">
           <div
@@ -85,14 +85,14 @@ export default function Home({ words }) {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
 export async function getServerSideProps() {
   await dbConnect();
 
-  const data = await Word.find({});
+  const data = await Word.find({}).sort({ word_en: 1 });
   return {
     props: {
       words: JSON.parse(JSON.stringify(data)),
