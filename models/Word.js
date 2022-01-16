@@ -7,4 +7,4 @@ const WordSchema = new mongoose.Schema({
   explaination_en: String,
 });
 
-export default mongoose.models.Word || mongoose.model("Word", WordSchema);
+export default mongoose.model("Word", WordSchema);
