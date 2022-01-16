@@ -1,4 +1,4 @@
-import { Word } from "../../../models/Word.js";
+import Word from "../../../models/Word.js";
 export default function handler(req, res) {
   const { id } = req.query;
 
