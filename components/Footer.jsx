@@ -10,7 +10,7 @@ function Footer() {
               className="text-lg text-gray-800 hover:text-gray-400"
               href="https://kisiselveriihlali.com/Anasayfa/"
             >
-              KVK Blog
+              KOIOS
             </a>
           </li>
         </ul>
