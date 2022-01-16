@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import dbConnect from "../lib/dbConnect";
-import Word from "../models/word";
+import { Word } from "../models/Word.js";
 import Footer from "../components/Footer";
 
 export default function Home({ words }) {
