@@ -29,7 +29,7 @@ export default function New() {
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col space-y-4">
           <label htmlFor="word_tr" className="text-lg font-medium">
-            word (Türkçe)
+            Terim (Türkçe)
           </label>
           <input
             onChange={(event) =>
@@ -42,7 +42,7 @@ export default function New() {
             placeholder=""
           />
           <label htmlFor="word_en" className="text-lg font-medium">
-            word (İngilizce)
+            Terim (İngilizce)
           </label>
           <input
             onChange={(event) =>
@@ -64,7 +64,6 @@ export default function New() {
             id="explaination_tr"
             className="border-2 border-gray-600 rounded-lg p-2"
             type="text"
-            required
             placeholder=""
           />
           <label htmlFor="explaination_en" className="text-lg font-medium">
@@ -77,7 +76,6 @@ export default function New() {
             id="explaination_en"
             className="border-2 border-gray-600 rounded-lg p-2"
             type="text"
-            required
             placeholder=""
           />
         </div>
